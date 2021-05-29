@@ -1,0 +1,80 @@
+2021-05-29 13:13:02.594  INFO 1392 --- [main] app.MainApplication                      : Starting MainApplication using Java 1.8.0_281 on DESKTOP-GITHLSR with PID 1392 (D:\Cursuri3\PA\PROJECT\target\classes started by boogy in D:\Cursuri3\PA\PROJECT)
+2021-05-29 13:13:02.600  INFO 1392 --- [main] app.MainApplication                      : No active profile set, falling back to default profiles: default
+2021-05-29 13:13:03.487  INFO 1392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 13:13:03.542  INFO 1392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2021-05-29 13:13:04.579  INFO 1392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-29 13:13:04.600  INFO 1392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-29 13:13:04.601  INFO 1392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 13:13:04.827  INFO 1392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-29 13:13:04.828  INFO 1392 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2137 ms
+2021-05-29 13:13:05.108  INFO 1392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 13:13:05.306  INFO 1392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 13:13:05.865  INFO 1392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 13:13:05.985  INFO 1392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-29 13:13:06.138  INFO 1392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-29 13:13:06.157  INFO 1392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+2021-05-29 13:13:07.364  INFO 1392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 13:13:07.374  INFO 1392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:13:07.887  WARN 1392 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 13:13:08.060  INFO 1392 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 13:13:08.200  INFO 1392 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 13:13:08.372  INFO 1392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 13:13:08.373  INFO 1392 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-29 13:13:08.397  INFO 1392 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-29 13:13:08.444  INFO 1392 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-29 13:13:08.620  INFO 1392 --- [main] app.MainApplication                      : Started MainApplication in 6.616 seconds (JVM running for 7.987)
+2021-05-29 13:15:06.951  INFO 17268 --- [main] app.MainApplication                      : Starting MainApplication using Java 1.8.0_281 on DESKTOP-GITHLSR with PID 17268 (D:\Cursuri3\PA\PROJECT\target\classes started by boogy in D:\Cursuri3\PA\PROJECT)
+2021-05-29 13:15:06.956  INFO 17268 --- [main] app.MainApplication                      : No active profile set, falling back to default profiles: default
+2021-05-29 13:15:07.772  INFO 17268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 13:15:07.824  INFO 17268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2021-05-29 13:15:08.453  INFO 17268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-29 13:15:08.461  INFO 17268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-29 13:15:08.461  INFO 17268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 13:15:08.605  INFO 17268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-29 13:15:08.605  INFO 17268 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1576 ms
+2021-05-29 13:15:08.768  INFO 17268 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 13:15:08.814  INFO 17268 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 13:15:08.933  INFO 17268 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 13:15:09.036  INFO 17268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-29 13:15:09.186  INFO 17268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-29 13:15:09.201  INFO 17268 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+2021-05-29 13:15:10.364  INFO 17268 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 13:15:10.375  INFO 17268 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:15:10.846  WARN 17268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 13:15:10.990  INFO 17268 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 13:15:11.121  INFO 17268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 13:15:11.285  INFO 17268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 13:15:11.286  INFO 17268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-29 13:15:11.304  INFO 17268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-29 13:15:11.345  INFO 17268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-29 13:15:11.508  INFO 17268 --- [main] app.MainApplication                      : Started MainApplication in 5.074 seconds (JVM running for 6.227)
+2021-05-29 13:26:58.492  INFO 18840 --- [main] app.MainApplication                      : Starting MainApplication using Java 1.8.0_281 on DESKTOP-GITHLSR with PID 18840 (D:\Cursuri3\PA\PROJECT\target\classes started by boogy in D:\Cursuri3\PA\PROJECT)
+2021-05-29 13:26:58.496  INFO 18840 --- [main] app.MainApplication                      : No active profile set, falling back to default profiles: default
+2021-05-29 13:26:59.338  INFO 18840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 13:26:59.389  INFO 18840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2021-05-29 13:27:00.043  INFO 18840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-29 13:27:00.050  INFO 18840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-29 13:27:00.051  INFO 18840 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 13:27:00.185  INFO 18840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-29 13:27:00.185  INFO 18840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1612 ms
+2021-05-29 13:27:00.350  INFO 18840 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 13:27:00.396  INFO 18840 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 13:27:00.515  INFO 18840 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 13:27:00.616  INFO 18840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-29 13:27:00.755  INFO 18840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-29 13:27:00.769  INFO 18840 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+2021-05-29 13:27:01.888  INFO 18840 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 13:27:01.899  INFO 18840 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:27:02.380  WARN 18840 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 13:27:02.529  INFO 18840 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 13:27:02.659  INFO 18840 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 13:27:02.826  INFO 18840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 13:27:02.827  INFO 18840 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-29 13:27:02.845  INFO 18840 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-29 13:27:02.890  INFO 18840 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-29 13:27:03.086  INFO 18840 --- [main] app.MainApplication                      : Started MainApplication in 5.099 seconds (JVM running for 6.303)
+2021-05-29 13:27:20.638  INFO 18840 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 13:27:20.638  INFO 18840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-29 13:27:20.639  INFO 18840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-05-29 13:27:20.762  INFO 18840 --- [http-nio-8080-exec-1] app.MainApplication                      : Maze 2847 was found in the database
+2021-05-29 13:27:43.108 ERROR 18840 --- [http-nio-8080-exec-4] app.MainApplication                      : Maze 2848 not found but requested
