@@ -2,6 +2,9 @@ package mazeObj;
 
 import java.util.*;
 
+/**
+ * MazeBuilder class receives an unbuilt Maze object and generates it randomly using the generateRecursive Method
+ */
 public class MazeBuilder {
     private Cell[][] maze;
     private int height;
@@ -15,13 +18,16 @@ public class MazeBuilder {
         this.width = mainMaze.getWidth();
     }
 
-    public void build(){
+    public void build() {
         this.generateRecursive();
 
 
     }
 
-
+    /**
+     * Main algorithm entry point, it picks a random cell ,adds it to the stack
+     * and calls the recursive pickRandom method
+     */
     public void generateRecursive() {
         Random rand = new Random();
 
@@ -44,6 +50,14 @@ public class MazeBuilder {
 
     }
 
+    /**
+     * Recursive method, it receives a Cell object and adds its "unbuilt" neighbours in a List
+     * If there are neighbours in the list, it randomly picks one,
+     * builds a corridor between the current cell and the neighbour
+     * adds the neighbour to the stack to come back later
+     * then calls pickRandom with the neighbour cell
+     * if a cell has no unbuilt neighbours, the method just backtracks and calls pickRandom with a cell from the stack
+     */
     public void pickRandom(Cell c) {
         int nr = this.findCell(c);
         int i = nr / this.width;
@@ -83,6 +97,10 @@ public class MazeBuilder {
 
     }
 
+    /**
+     * The method receives 2 Cell onjects and marks the corresponding walls to 0 so that a corridor is created
+     * between the cells
+     */
     public void buildCorridor(Cell a, Cell b) {
         int nr = this.findCell(a);
         int i = nr / this.width;
@@ -90,7 +108,6 @@ public class MazeBuilder {
         nr = this.findCell(b);
         int x = nr / this.width;
         int y = nr % this.width;
-
         switch (i - x) {
             case -1:
                 a.breakWall("S");
@@ -111,11 +128,16 @@ public class MazeBuilder {
                         b.breakWall("E");
                         break;
                 }
-
         }
 
 
     }
+
+    /**
+     *
+     * The method is used to get the exact coordinates of the received Cell parameter
+     * the i and j coordinates can be extracted from the returned value using position/this.width and position%this.width
+     */
     public int findCell(Cell c) {
         int pozition = -1;
         for (int i = 0; i < maze.length; i++)
@@ -128,7 +150,7 @@ public class MazeBuilder {
         return pozition;
     }
 
-        public void print() {
+    public void print() {
         int k;
         int x = 2;
         for (int i = 0; i < maze.length; i++) {

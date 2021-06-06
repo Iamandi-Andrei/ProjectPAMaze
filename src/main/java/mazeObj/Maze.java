@@ -8,12 +8,15 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.*;
 
+/**
+ * Maze entity, initially it had a 2D array of cells but had to modify due to persistance limitations
+ */
 @Entity
 public class Maze {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
-    @OneToMany(cascade=CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Cell> maze;
     private int height;
     private int width;
@@ -45,7 +48,10 @@ public class Maze {
         return this.height * this.width;
     }
 
-
+    /**
+     * Used as an adaptation to the Cell 2D array to Cell list modification
+     * so the Maze generator algorithm still works
+     */
     public Cell[][] getMaze() {
         Cell[][] result = new Cell[this.height][this.width];
         for (int i = 0; i < result.length; i++)

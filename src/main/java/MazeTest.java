@@ -40,7 +40,7 @@ public class MazeTest {
                 "Second coordinate should be good");
     }
 
-    @RepeatedTest(500)
+    @RepeatedTest(200)
     @DisplayName("Ensure the maze is perfect")
     public void testBlockedCells() {
         builder.generateRecursive();

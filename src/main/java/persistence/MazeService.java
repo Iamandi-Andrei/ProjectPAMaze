@@ -5,13 +5,15 @@ import mazeObj.Maze;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Used to save,find or delete a Maze from the database
+ */
 @Service
 public class MazeService {
 
     @Autowired
     MazeRepository mazeRepository;
-    @Autowired
-    CellRepository cellRepository;
+
 
 
     @Autowired

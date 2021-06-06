@@ -6,6 +6,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Used to represent a maze cell, basically a 3 by 3 int matrix containing walls (1) or corridor (0)
+ * The 3 by 3 int matrix was modified to a list of Integer due to persistance issues
+ */
 @Entity
 public class Cell {
 
@@ -28,6 +32,11 @@ public class Cell {
         this.walls.set(4, 0);
     }
 
+    /**
+     * Sets a certain wall to 0 so that it becomes walk-able
+     *
+     * @param direction possible values: cardinals N,S,E,W ..north south east west
+     */
     public void breakWall(String direction) {
 
         switch (direction) {
@@ -85,7 +94,7 @@ public class Cell {
                     print.append(" 0 ");
                 else
                     print.append(" \u25A0 ");
-                print.append("\n");
+            print.append("\n");
         }
         return print.toString();
     }
@@ -110,19 +119,20 @@ public class Cell {
         return result;
     }
 
-    public StringBuilder getCellLine(int line){
-        StringBuilder response=new StringBuilder();
-        for(int i=0;i<3;i++)
-            if(walls.get(i+line*3)==1)
+    public StringBuilder getCellLine(int line) {
+        StringBuilder response = new StringBuilder();
+        for (int i = 0; i < 3; i++)
+            if (walls.get(i + line * 3) == 1)
                 response.append("\u25A0");
             else response.append("\u25A1");
         return response;
 
     }
-    public String getCellLineCSV(int line){
-        StringBuilder response=new StringBuilder();
-        for(int i=0;i<3;i++)
-            if(walls.get(i+line*3)==1)
+
+    public String getCellLineCSV(int line) {
+        StringBuilder response = new StringBuilder();
+        for (int i = 0; i < 3; i++)
+            if (walls.get(i + line * 3) == 1)
 
                 response.append("1,");
 
