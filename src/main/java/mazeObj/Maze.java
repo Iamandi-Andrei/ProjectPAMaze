@@ -13,7 +13,7 @@ public class Maze {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
-    @OneToMany
+    @OneToMany(cascade=CascadeType.ALL)
     private List<Cell> maze;
     private int height;
     private int width;

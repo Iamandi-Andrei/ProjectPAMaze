@@ -39,23 +39,30 @@ public class MazeController {
     CellService cellRepository;
 
     @PostMapping("/create/{height}/{width}")
-    public String createMaze(@PathVariable("height") int height, @PathVariable("width") int width) {
+    public ResponseEntity<String> createMaze(@PathVariable("height") int height,
+                                             @PathVariable("width") int width) {
 
-        List<Cell> cellList = new ArrayList<>();
+
         Maze obj = new Maze(height, width);
 
 
         MazeBuilder maze = new MazeBuilder(obj);
-        maze.generateRecursive();
+        try {
+            maze.generateRecursive();
+        }catch (StackOverflowError e){
 
-        cellList = obj.getCells();
-        for (Cell c : obj.getCells())
-            cellRepository.saveOrUpdate(c);
+            LOGGER.error("OverFlowError for sizes {} , {}",height,width);
+            return new ResponseEntity<>("Internal generation error",HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }
+
+//        for (Cell c : obj.getCells())
+//            cellRepository.saveOrUpdate(c);
         repository.saveOrUpdate(obj);
 
-        LOGGER.info("Generated a maze with {} {} sizes", height, width);
+        LOGGER.info("Generated a maze with {} {} sizes..id: {}", height, width, obj.getId());
 
-        return "The maze id is: " + obj.getId();
+        return new ResponseEntity<>("The maze id is: " + obj.getId(),HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -65,11 +72,12 @@ public class MazeController {
         if (m != null) {
             //respHeaders.add("Maze", m.printMaze().toString());
             LOGGER.info("Maze {} was found in the database", id);
-            return new ResponseEntity<String>(m.printMaze().toString(), HttpStatus.OK);
+            return new ResponseEntity<>(m.printMaze().toString(), HttpStatus.OK);
+        } else {
+            //respHeaders.add("MazeStatus", "Maze not found");
+            LOGGER.error("Maze {} not found but requested", id);
+            return new ResponseEntity<>("Maze not found", HttpStatus.NOT_FOUND);
         }
-        //respHeaders.add("MazeStatus", "Maze not found");
-        LOGGER.error("Maze {} not found but requested", id);
-        return new ResponseEntity<String>("Maze not found", HttpStatus.NOT_FOUND);
     }
 
 
@@ -80,12 +88,13 @@ public class MazeController {
 
         if (m != null) {
             repository.delete(id);
-            LOGGER.info("Maze {} deleted",id);
+            LOGGER.info("Maze {} deleted", id);
             return "Maze " + id + " deleted";
 
+        } else {
+            LOGGER.error("Maze {} not found but requested", id);
+            return "No maze found with id: " + id;
         }
-        LOGGER.error("Maze {} not found but requested",id);
-        return "No maze found with id: " + id;
     }
 
     @GetMapping(value = "/{id}/save", produces = "text/csv")
@@ -100,11 +109,11 @@ public class MazeController {
 
         PrintWriter out = response.getWriter();
         Maze m = repository.findByID(id);
-        if(m!=null) {
-            LOGGER.info("Maze {} was requested for download",id);
+        if (m != null) {
+            LOGGER.info("Maze {} was requested for download", id);
             m.printToCSV(out);
-        }
-        LOGGER.error("Maze {} not found but requested",id);
+        } else
+            LOGGER.error("Maze {} not found but requested", id);
 
     }
 

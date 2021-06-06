@@ -9,7 +9,6 @@ public class Main {
         //MazeBuilder maze=new MazeBuilder(obj);
        // maze.generateRecursive();
         System.out.println("-------------------------");
-        System.out.rpntln("testing shit");
         //maze.print();
        // int count= obj.getnonVisits();
        // int percent=obj.getSizeTotal();
