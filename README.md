@@ -6,6 +6,23 @@ Maze Generator- generarea de labirint 2D + posibilitatea de export (curent: CSV 
 The project can be found here: https://calm-wave-66602.herokuapp.com/swagger-ui.html  
 The link provided takes the user to the swagger documentation of the app to see all the available app commands
 
+# Local run
+To run the app locally, the following application.properties lines should be modified:  
+spring.datasource.username=${JDBC_DATABASE_USERNAME}  
+spring.datasource.password=${JDBC_DATABASE_PASSWORD}  
+spring.datasource.url=${JDBC_DATABASE_URL}  
+
+Using local username,password and url. More lines should be modified if PostgreSQL is not the desired database.  
+
+Also, the app should be used with the following JVM options: "-Xms512M -Xmx1024M -Xss512M -XX:+CMSClassUnloadingEnabled"  
+
+# Mapped links for local run
+GET: /maze/{id}  
+GET: /maze/{id}/save  
+POST: /maze/create/{height}/{width}  
+DELETE: /maze/{id}  
+     
+
 
 # Chosen Algorithm
 
